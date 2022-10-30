@@ -14,13 +14,28 @@ const ColorCount = () => {
 
   return (
     <div>
-      <button
-        style={{ backgroundColor: clr, padding: "10px", "borderRadius":"10px",border:"none" }}
-        onClick={handleClick}
-      >
-        Click me {color.heors.hero1.btn1.count}
-      </button>
-      <h3>{JSON.stringify(color)}</h3>
+      <br />
+      <center>
+        <h3>Updated button Color with Redux State</h3>
+      </center>
+
+      <center>
+        <button
+          style={{
+            backgroundColor: clr,
+            padding: "10px",
+            borderRadius: "10px",
+            border: "none",
+          }}
+          onClick={handleClick}
+        >
+          Click me {color.heors.hero1.btn1.count}
+        </button>
+      </center>
+      <center>
+        {" "}
+        <h3>{JSON.stringify(color)}</h3>
+      </center>
     </div>
   )
 }

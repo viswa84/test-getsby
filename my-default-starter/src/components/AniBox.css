@@ -1,6 +1,6 @@
 .App {
   background-color: black;
-  height: 40vh;
+  height: 50vh;
 }
 
 .App button {
@@ -15,7 +15,7 @@
   width: 100px;
   height: 100px;
   margin: 0 auto;
-  background-color: white;
+  background-color: rgb(120, 107, 107);
   border-radius: 8px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,

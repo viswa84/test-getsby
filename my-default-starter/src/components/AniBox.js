@@ -17,18 +17,22 @@ export default function AniBox() {
   };
 
   return (
-    <div className="App">
-      <center>
-        <button onClick={handleClick}>{vis ? "unmount" : "mount"}</button>
-      </center>
-      <div className="container">
-        {transform((style, item) =>
-          item ? (
-            <animated.div style={style} className="item"></animated.div>
-          ) : (
-            ""
-          )
-        )}
+    <div>
+        <center><h3>Added Animations</h3></center>
+        <div className="App">
+        
+        <center>
+          <button onClick={handleClick}>{vis ? "unmount" : "mount"}</button>
+        </center>
+        <div className="container">
+          {transform((style, item) =>
+            item ? (
+              <animated.div style={style} className="item"></animated.div>
+            ) : (
+              ""
+            )
+          )}
+        </div>
       </div>
     </div>
   );
