@@ -1,7 +1,12 @@
 import * as React from "react"
-// import { useSelector } from "react-redux"
+import AniBox from "../components/AniBox";
+
+import ColorCount from "../components/colorCount";
+
 import Counter from '../components/Counter';
-// import ColorCount from '../components/colorCount';
+
+
+
 
 import Layout from "../components/layout"
 
@@ -12,9 +17,11 @@ const IndexPage = () => {
 
 return <>
 <Layout>
-   <center>Hallo world</center>
-   {/* <ColorCount/> */}
-   <Counter/>
+  
+ <AniBox/>
+   <ColorCount/>
+  
+   {/* <Counter/> */}
   </Layout></>
 
 }

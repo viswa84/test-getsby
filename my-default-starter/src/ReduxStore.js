@@ -1,15 +1,17 @@
 
-import { colorReduser } from './Reducers/creduser';
-import { createStore } from 'redux';
+import { colorReduser, creduser } from './Reducers/creduser';
+import { combineReducers, createStore } from 'redux';
 import Reducer from '../src/Reducers/CounterReducer';
 
 
 
+const rootReduser= combineReducers({
+    count:Reducer,
+    color:creduser
+})
 
-const initialState = {
-    counterData: 1
-}
-const store = createStore(Reducer, initialState);
+
+const store = createStore(rootReduser);
 
 export default store;
 // CounterAction.js

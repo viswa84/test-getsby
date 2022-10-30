@@ -1,33 +1,28 @@
-// import React from "react"
-// import { useDispatch, useSelector } from "react-redux"
-// import { INCREMENT_COUNT } from "../Reducers/cactiontypes"
+import React from "react"
+import { useDispatch, useSelector } from "react-redux"
+import { INCREMENT_COUNT } from "../Reducers/cactiontypes"
 
-// // heors: { hero1: { btn1: { count: 1 } } }
-// const ColorCount = () => {
-//   const {
-//     heros: {
-//       heor1: {
-//         btn1: { count},
-//       },
-//     },
-//   } = useSelector(store => store.color)
+const ColorCount = () => {
+  const color = useSelector(store => store.color)
+  const clr = color.heors.hero1.btn1.color
 
-//   const dispatch=useDispatch()
+  const dispatch = useDispatch()
 
+  const handleClick = () => {
+    dispatch({ type: INCREMENT_COUNT })
+  }
 
+  return (
+    <div>
+      <button
+        style={{ backgroundColor: clr, padding: "10px", "borderRadius":"10px",border:"none" }}
+        onClick={handleClick}
+      >
+        Click me {color.heors.hero1.btn1.count}
+      </button>
+      <h3>{JSON.stringify(color)}</h3>
+    </div>
+  )
+}
 
-//   const handleClick=()=>{
-//       dispatch({type:INCREMENT_COUNT});
-//       console.log(count, color);
-//   }
-
-//   return (
-//     <div>
-//       <h3>colorCount:{count}</h3>
-
-//       <button onClick={handleClick}>Increment</button>
-//     </div>
-//   )
-// }
-
-// export default ColorCount
+export default ColorCount
