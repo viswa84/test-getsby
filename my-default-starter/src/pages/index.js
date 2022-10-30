@@ -1,32 +1,25 @@
 import * as React from "react"
-import AniBox from "../components/AniBox";
+import AniBox from "../components/AniBox"
 
-import ColorCount from "../components/colorCount";
+import ColorCount from "../components/colorCount"
 
-import Counter from '../components/Counter';
-
-
-
+import Counter from "../components/Counter"
 
 import Layout from "../components/layout"
 
-
 const IndexPage = () => {
+  return (
+    <>
+      <Layout>
+        <AniBox />
+        <ColorCount />
 
- 
-
-return <>
-<Layout>
-  
- <AniBox/>
-   <ColorCount/>
-  
-   {/* <Counter/> */}
-  </Layout></>
-
+        <Counter />
+      </Layout>
+    </>
+  )
 }
 
-  
 // )
 
 /**
